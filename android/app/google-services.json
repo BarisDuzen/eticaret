@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "702914371482",
+    "project_id": "eticaret-206d3",
+    "storage_bucket": "eticaret-206d3.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702914371482:android:9f7e8a9dc5e50e3e0e2423",
+        "android_client_info": {
+          "package_name": "com.example.eticaret"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyApFOzwwCySo790O2r3JPq76Z8nwin81sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
