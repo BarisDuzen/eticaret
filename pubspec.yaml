@@ -58,9 +58,9 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
   assets:
-    - icons/ccc.png
-    - icons/Main.png
-    - icons/shop.png
+    - assets/icons/ccc.png
+    - assets/icons/Main.png
+    - assets/icons/shop.png
 
   fonts:
     - family: EncodeSans

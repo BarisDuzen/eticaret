@@ -34,7 +34,7 @@ class _NavigationState extends State<Navigation> {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Image.asset("icons/Main.png", width: 24, height: 24),
+                Image.asset("assets/icons/Main.png", width: 24, height: 24),
                 const SizedBox(height: 4),
                 if (index == 0)
                   const Icon(Icons.circle, size: 6, color: Colors.red)
@@ -45,7 +45,7 @@ class _NavigationState extends State<Navigation> {
           BottomNavigationBarItem(
             icon: Column(
               children: [
-                Image.asset("icons/shop.png", width: 24, height: 24),
+                Image.asset("assets/icons/shop.png", width: 24, height: 24),
                 const SizedBox(height: 4),
                 if (index == 1)
                   const Icon(Icons.circle, size: 6, color: Colors.red)

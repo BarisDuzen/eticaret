@@ -7,6 +7,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:eticaret/Products.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -49,8 +50,12 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(height: 10,),
-                IconButton(onPressed: (){
+                IconButton(onPressed:()async{
                   Auth().singOut();
+                  SharedPreferences prefs =await SharedPreferences.getInstance();
+                  await prefs.setBool('remember_me', false);
+                  await prefs.remove('saved_email');
+
                   Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => LoginPage()),
@@ -92,7 +97,7 @@ class _HomePageState extends State<HomePage> {
                 }, icon: Container(decoration: BoxDecoration(borderRadius: BorderRadius.circular(12),color:Colors.black,),child: SizedBox(width:48,height:48,child: Padding(
 
                   padding: const EdgeInsets.all(12.0),
-                  child: Image.asset('icons/ccc.png',color: Colors.white,width: 24,height: 24,),
+                  child: Image.asset('assets/icons/ccc.png',color: Colors.white,width: 24,height: 24,),
                 ))),)
               ],
             ),

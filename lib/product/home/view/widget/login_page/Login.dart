@@ -15,11 +15,26 @@ class _LoginPageState extends State<LoginPage> {
   final emailController = TextEditingController();
   final passwordController = TextEditingController();
   final formKey = GlobalKey<FormState>();
+  bool _rememberMe = false;
+
 
   @override
   void initState() {
     super.initState();
-    _loadSavedEmail();
+    _checkRememberMe();
+  }
+
+  Future<void> _checkRememberMe() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    bool? remember = prefs.getBool('remember_me');
+    String? email = prefs.getString('saved_email');
+
+    if (remember == true && email != null) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(builder: (_) => Navigation()),
+      );
+    }
   }
 
   Future<void> _loadSavedEmail() async {
@@ -115,7 +130,11 @@ class _LoginPageState extends State<LoginPage> {
                         );
 
                         if (success) {
-                          await _saveEmail(emailController.text);
+                          if (_rememberMe) {
+                            await _saveEmail(emailController.text);
+                            SharedPreferences prefs = await SharedPreferences.getInstance();
+                            await prefs.setBool('remember_me', true);
+                          }
 
                           Navigator.pushReplacement(
                             context,
@@ -142,6 +161,21 @@ class _LoginPageState extends State<LoginPage> {
                   ),
                 ),
                 const SizedBox(height: 20),
+
+                Row(
+                  children: [
+                    Checkbox(
+                      value: _rememberMe,
+                      onChanged: (bool? newValue) {
+                        setState(() {
+                          _rememberMe = newValue ?? false;
+                        });
+                      },
+                    ),
+                    const Text("Beni Hatırla"),
+                  ],
+                ),
+
 
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
