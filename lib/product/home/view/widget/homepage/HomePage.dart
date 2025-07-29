@@ -1,8 +1,8 @@
 import 'package:eticaret/data/repo/Auth.dart';
-import 'package:eticaret/product/home/cubits/FavouriteCubit.dart';
-import 'package:eticaret/product/home/cubits/HomepageCubit.dart';
-import 'package:eticaret/product/home/views/Detail.dart';
-import 'package:eticaret/product/home/views/Login.dart';
+import 'package:eticaret/product/home/cubit/FavouriteCubit.dart';
+import 'package:eticaret/product/home/cubit/HomepageCubit.dart';
+import 'package:eticaret/product/home/view/widget/homepage/Detail.dart';
+import 'package:eticaret/product/home/view/widget/login_page//Login.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -162,7 +162,7 @@ class _HomePageState extends State<HomePage> {
                                 ],
                               ),
                               Padding(
-                                padding: const EdgeInsets.all(8.0),
+                                padding: const EdgeInsets.symmetric(horizontal: 8.0,vertical: 8),
                                 child: Column(
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [

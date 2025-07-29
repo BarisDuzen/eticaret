@@ -1,8 +1,8 @@
 import 'package:eticaret/Products.dart';
-import 'package:eticaret/product/home/cubits/FavouriteCubit.dart';
+import 'package:eticaret/product/home/cubit/FavouriteCubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'Detail.dart';
+import 'package:eticaret/product/home/view/widget/homepage//Detail.dart';
 
 class Favourites extends StatefulWidget {
       const Favourites({super.key});

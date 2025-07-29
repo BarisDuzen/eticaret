@@ -1,6 +1,6 @@
 import 'package:eticaret/data/repo/Auth.dart';
-import 'package:eticaret/product/home/views/HomePage.dart';
-import 'package:eticaret/product/home/views/Login.dart';
+import 'package:eticaret/product/home/view/widget/homepage/HomePage.dart';
+import 'package:eticaret/product/home/view/widget/login_page/Login.dart';
 import 'package:flutter/material.dart';
 
 class RegisterPage extends StatelessWidget {

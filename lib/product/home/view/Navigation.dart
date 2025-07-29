@@ -1,6 +1,6 @@
-import 'package:eticaret/product/home/views/Checkout.dart';
-import 'package:eticaret/product/home/views/Favourites.dart';
-import 'package:eticaret/product/home/views/HomePage.dart';
+import 'package:eticaret/product/home/view/widget/cart/Checkout.dart';
+import 'package:eticaret/product/home/view/widget/favourites/Favourites.dart';
+import 'package:eticaret/product/home/view/widget/homepage/HomePage.dart';
 import 'package:flutter/material.dart';
 
 class Navigation extends StatefulWidget {

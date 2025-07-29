@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:eticaret/Products.dart';
-import 'package:eticaret/product/home/cubits/CheckoutCubit.dart';
+import 'package:eticaret/product/home/cubit/CheckoutCubit.dart';
 
 class Check extends StatefulWidget {
   const Check({Key? key}) : super(key: key);

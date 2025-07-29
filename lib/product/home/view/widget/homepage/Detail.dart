@@ -1,9 +1,9 @@
-import 'package:eticaret/product/home/cubits/CheckoutCubit.dart';
-import 'package:eticaret/product/home/views/Checkout.dart';
+import 'package:eticaret/product/home/cubit/CheckoutCubit.dart';
+import 'package:eticaret/product/home/view/widget/cart/Checkout.dart';
 import 'package:flutter/material.dart';
 import 'package:eticaret/Products.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:eticaret/product/home/cubits/FavouriteCubit.dart';
+import 'package:eticaret/product/home/cubit/FavouriteCubit.dart';
 
 class Detail extends StatefulWidget {
   final Products product;

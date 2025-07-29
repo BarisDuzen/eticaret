@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:eticaret/data/repo/Auth.dart';
-import 'package:eticaret/product/home/views/Navigation.dart';
-import 'package:eticaret/product/home/views/Register.dart';
+import 'package:eticaret/product/home/view/Navigation.dart';
+import 'package:eticaret/product/home/view/widget/login_page/Register.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);

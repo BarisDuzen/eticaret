@@ -1,4 +1,5 @@
 import 'package:eticaret/data/repo/GetRepo.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:eticaret/Products.dart';
 
@@ -14,7 +15,7 @@ class HomeCubit extends Cubit<List<Products>> {
       emit(products);
     } catch (e) {
       emit([]);
-      print("Cubit API Hatası: $e");
+      debugPrint("Cubit API Hatası: $e");
     }
   }
 
